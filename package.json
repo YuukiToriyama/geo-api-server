@@ -1,0 +1,30 @@
+{
+  "name": "geo-api-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "forever start src/main.js",
+    "start:dev": "nodemon src/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YUUKIToriyama/geo-api-server.git"
+  },
+  "author": "YUUKIToriyama <github@toriyama.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YUUKIToriyama/geo-api-server/issues"
+  },
+  "homepage": "https://github.com/YUUKIToriyama/geo-api-server#readme",
+  "dependencies": {
+    "@geolonia/normalize-japanese-addresses": "^2.0.0",
+    "@geolonia/open-reverse-geocoder": "^0.0.7",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "forever": "^4.0.1",
+    "nodemon": "^2.0.12"
+  }
+}
