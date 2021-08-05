@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YUUKIToriyama/geo-api-server</title>
+</head>
+
+<body>
+	<header>
+		<h1>YUUKIToriyama/geo-api-server</h1>
+		<p>Source code is <a href="https://github.com/YUUKIToriyama/geo-api-server">here</a>.</p>
+	</header>
+	<main>
+		<h2>What is this?</h2>
+		<p>住所正規化ツール<a
+				href="https://github.com/geolonia/normalize-japanese-addresses">geolonia/normalize-japanese-addresses</a>および、逆ジオコーディングツールの<a
+				href="https://github.com/geolonia/open-reverse-geocoder">geolonia/open-reverse-geocoder</a>をWebAPIとして使用できるようにしたものです。
+		</p>
+		<h2>Usage</h2>
+		<ol>
+			<li>住所の正規化</li>
+			<ul>
+				<li><code>http://localhost:3000/normalize?address=北海道札幌市西区24-2-2-3-3</code></li>
+				<li>パラメータ<code>address</code>に正規化したい住所を指定します。</li>
+			</ul>
+			<li>逆ジオコーディング</li>
+			<ul>
+				<li><code>http://localhost:3000/latlng2address?lng=35.04486&lat=135.73016</code></li>
+				<li>パラメータ<code>lng</code>,<code>lat</code>のそれぞれに緯度、経度を指定します。</li>
+			</ul>
+		</ol>
+	</main>
+	<footer>
+		<p>Powered by greatful libraries from <a href="https://github.com/geolonia">Geolonia inc.</a></p>
+		<p>(c)2021 YUUKIToriyama</p>
+	</footer>
+</body>
+
+</html>
