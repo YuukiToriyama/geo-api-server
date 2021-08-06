@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const { openReverseGeocoder } = require("@geolonia/open-reverse-geocoder");
 const { normalize } = require("@geolonia/normalize-japanese-addresses");
 const app = express();
@@ -7,6 +8,8 @@ const config = {
 	port: process.env.PORT || 3000
 }
 
+// クロスオリジンを許可
+app.use(cors());
 // http://localhost:3000
 app.use("/", express.static("public"));
 // http://localhost:3000/reverseGeoCoding?lat=35.04486&lng=135.73016
