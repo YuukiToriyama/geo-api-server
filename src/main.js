@@ -9,12 +9,12 @@ const config = {
 
 // http://localhost:3000
 app.use("/", express.static("public"));
-// http://localhost:3000/latlng2address?lng=35.04486&lat=135.73016
+// http://localhost:3000/reverseGeoCoding?lat=35.04486&lng=135.73016
 app.get("/reverseGeoCoding", async (request, response) => {
 	const longitude = parseFloat(request.query.lng);
 	const latitude = parseFloat(request.query.lat);
 	try {
-		const result = await openReverseGeocoder([latitude, longitude]);
+		const result = await openReverseGeocoder([longitude, latitude]);
 		response.json(result);
 	} catch (error) {
 		response.json({

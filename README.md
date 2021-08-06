@@ -15,7 +15,7 @@ Heroku にデプロイしてみましたが、無料版なので 30 分アクセ
   - `https://geo-api-server.herokuapp.com/normalizeAddress?address=北海道札幌市西区24-2-2-3-3`
   - `{"pref":"北海道","city":"札幌市西区","town":"二十四軒二条二丁目","addr":"3-3","level":3}`
 - 逆ジオコーディング
-  - `https://geo-api-server.herokuapp.com/reverseGeocoding?lng=35.04486&lat=135.73016`
+  - `https://geo-api-server.herokuapp.com/reverseGeocoding?lat=35.04486&lng=135.73016`
   - `{"code":"26101","prefecture":"京都府","city":"京都市北区"}`
 
 ## Thanks to...
