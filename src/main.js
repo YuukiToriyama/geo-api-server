@@ -4,7 +4,7 @@ const { normalize } = require("@geolonia/normalize-japanese-addresses");
 const app = express();
 
 const config = {
-	port: 3000
+	port: process.env.PORT || 3000
 }
 
 // http://localhost:3000
