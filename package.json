@@ -4,8 +4,7 @@
   "description": "",
   "main": "src/main.js",
   "scripts": {
-    "start": "NODE_ENV=production forever start src/main.js",
-    "start:dev": "nodemon src/main.js",
+    "start": "nodemon src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +23,6 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "forever": "^4.0.1",
     "nodemon": "^2.0.12"
   }
 }
