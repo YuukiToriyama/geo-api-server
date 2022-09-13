@@ -1,28 +1,32 @@
 {
-  "name": "geo-api-server",
-  "version": "0.0.1",
-  "description": "",
-  "main": "src/main.js",
-  "scripts": {
-    "start": "node src/main.js",
-    "start:dev": "nodemon src/main.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/YUUKIToriyama/geo-api-server.git"
-  },
-  "author": "YUUKIToriyama <github@toriyama.dev>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/YUUKIToriyama/geo-api-server/issues"
-  },
-  "homepage": "https://github.com/YUUKIToriyama/geo-api-server#readme",
-  "dependencies": {
-    "@geolonia/normalize-japanese-addresses": "^2.0.0",
-    "@geolonia/open-reverse-geocoder": "^0.0.7",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.12"
-  }
+    "name": "geo-api-server",
+    "version": "0.1.0",
+    "description": "",
+    "main": "dist/main.js",
+    "scripts": {
+        "start": "node dist/main.js",
+        "debug": "ts-node src/main.ts",
+        "build": "rm -rf ./dist && tsc"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/YUUKIToriyama/geo-api-server.git"
+    },
+    "author": "YUUKIToriyama <github@toriyama.dev>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/YUUKIToriyama/geo-api-server/issues"
+    },
+    "homepage": "https://github.com/YUUKIToriyama/geo-api-server#readme",
+    "dependencies": {
+        "@fastify/cors": "^8.1.0",
+        "@fastify/static": "^6.5.0",
+        "@geolonia/normalize-japanese-addresses": "^2.7.1",
+        "@geolonia/open-reverse-geocoder": "^0.1.0",
+        "fastify": "^4.5.3"
+    },
+    "devDependencies": {
+        "ts-node": "^10.9.1",
+        "typescript": "^4.8.3"
+    }
 }
