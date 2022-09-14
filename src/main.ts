@@ -1,9 +1,10 @@
-import fastify from 'fastify';
-import { fastifyStatic } from "@fastify/static";
 import cors from "@fastify/cors";
-import * as path from "path"
-import { openReverseGeocoder } from '@geolonia/open-reverse-geocoder';
+import fastifyStatic from "@fastify/static";
+import * as NormalizeLatLng from '@geolonia/normalize-any-latlng';
 import { normalize } from '@geolonia/normalize-japanese-addresses';
+import { openReverseGeocoder } from '@geolonia/open-reverse-geocoder';
+import fastify from 'fastify';
+import * as path from "path";
 
 const app = fastify({
 	logger: true
@@ -53,6 +54,15 @@ app.get<{ Querystring: NormalizeAddressQueryParameter }>("/normalizeAddress", as
 			}
 		});
 	}
+});
+
+interface NormalizeLatLngQueryParameter {
+	expression: string
+}
+app.get<{ Querystring: NormalizeLatLngQueryParameter }>("/normalizeLatLng", (request, reply) => {
+	const expression = request.query.expression;
+	const result = NormalizeLatLng.normalize(expression);
+	reply.send(result);
 });
 
 (async () => {

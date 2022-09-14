@@ -1,11 +1,12 @@
 {
     "name": "geo-api-server",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "",
     "main": "dist/main.js",
+    "type": "module",
     "scripts": {
         "start": "node dist/main.js",
-        "debug": "ts-node src/main.ts",
+        "debug": "node --loader ts-node/esm src/main.ts",
         "build": "rm -rf ./dist && tsc"
     },
     "repository": {
@@ -21,6 +22,7 @@
     "dependencies": {
         "@fastify/cors": "^8.1.0",
         "@fastify/static": "^6.5.0",
+        "@geolonia/normalize-any-latlng": "github:geolonia/normalize-any-latlng#latest",
         "@geolonia/normalize-japanese-addresses": "^2.7.1",
         "@geolonia/open-reverse-geocoder": "^0.1.0",
         "fastify": "^4.5.3"
